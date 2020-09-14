@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.learning.spring.filter.JwtAuthenticationFilter;
+import com.learning.spring.filter.JwtRequestFilter;
 //import com.learning.spring.filter.JwtAuthenticationFilter;
 import com.learning.spring.service.MyUserDetailsService;
 
@@ -23,7 +23,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter
 	private MyUserDetailsService myUserDetailsService;
 	
 	@Autowired
-	private JwtAuthenticationFilter jwtAuthFilter;
+	private JwtRequestFilter jwtAuthFilter;
 	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception 
